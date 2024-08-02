@@ -1,0 +1,26 @@
+/* Importa fontes do Google Fonts */
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif; 
+    background-color: #f0f0f0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo do rodapé */
+footer {
+    display: flex;
+    background-color: #333;
+    color: #f0f0f0;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    border-top: 2px solid #ff1145;
+    justify-content: center;
+    align-items: center;
+}
