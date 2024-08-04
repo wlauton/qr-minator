@@ -1,9 +1,7 @@
-/* Importa fontes do Google Fonts */
-
-/* Estilo do corpo da página */
+/* Define a fonte padrão, cor de fundo e estilo geral da página */
 body {
-    font-family: Arial, sans-serif; 
-    background-color: #f0f0f0; 
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,16 +9,198 @@ body {
     margin: 0;
 }
 
+/* Estilo do contêiner principal */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Centraliza o título */
+h1 {
+    text-align: center;
+}
+
+/* Estilo do formulário para disposição em coluna */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Espaçamento para os rótulos */
+label {
+    margin-top: 10px;
+}
+
+/* Estilo da seção de customização do QR Code */
+#qrCustomize {
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Disposição dos rótulos de customização */
+#qrCustomizeLabels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Estilo dos rótulos do menu */
+.menuLabels {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Disposição dos botões de customização */
+#qrCustomizeButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Esconde os inputs de cor e arquivo */
+#qrCustomizeButtons input[type="color"],
+#qrCustomizeButtons input[type="file"] {
+    display: none;
+}
+
+/* Estilo dos botões de customização */
+#qrCustomizeButtons label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    margin: 0px 5px;
+    background-color: #d0ffb6;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Mudança de cor ao passar o mouse sobre os botões */
+#qrCustomizeButtons label:hover {
+    background-color: #ccc;
+}
+
+/* Ícones para os inputs de arquivo e cor */
+#qrCustomizeButtons label input[type="file"] + span::before {
+    content: '📁';
+    font-size: 24px;
+}
+
+#qrCustomizeButtons label input[type="color"] + span::before {
+    content: '🎨';
+    font-size: 24px;
+}
+
+#qrCustomizeButtons label input[type="range"] + span::before {
+    content: '';
+    font-size: 24px;
+}
+
+/* Estilo do input de faixa (range) */
+#qrCustomizeButtons input[type="range"] {
+    width: 100px;
+    cursor: pointer;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Estilo da trilha do input de faixa */
+#qrCustomizeButtons input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #68be68;
+    border-radius: 5px;
+}
+
+/* Estilo do polegar do input de faixa */
+#qrCustomizeButtons input[type="range"]::-webkit-slider-thumb {
+    border: 1px solid #000;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #10B030;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6px;
+}
+
+/* Remove a borda ao focar no input de faixa */
+#qrCustomizeButtons input[type="range"]:focus {
+    outline: none;
+}
+
+/* Estilo do polegar do input de faixa no Firefox */
+#qrCustomizeButtons input[type="range"]::-moz-range-thumb {
+    border: 1px solid #000;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #10B030;
+    cursor: pointer;
+}
+
+/* Estilo do input de texto */
+input[type="text"] {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo do botão de envio */
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Mudança de cor ao passar o mouse sobre o botão */
+button:hover {
+    background-color: #218838;
+}
+
+/* Contêiner do QR Code */
+#qrCodeContainer {
+    width: 512px;
+    height: 512px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Estilo do QR Code */
+#qrCode {
+    margin-top: 20px;
+    text-align: center;
+}
+
 /* Estilo do rodapé */
 footer {
     display: flex;
-    background-color: #333;
-    color: #f0f0f0;
-    position: fixed;
     bottom: 0;
-    height: 50px;
+    height: 5vh;
     width: 100%;
-    border-top: 2px solid #ff1145;
+    background: rgb(0, 0, 0);
+    color: #fff;
+    position: fixed;
     justify-content: center;
     align-items: center;
+    font-size: large;
+    font-weight: bold;
+    border-top: 4px #218838 solid;
 }

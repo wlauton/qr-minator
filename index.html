@@ -1,23 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <!-- Metadados da Página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QRminator - Crie QRCodes</title>
-
-    <!-- Links de Estilos Externos -->
+    <title>QR-MINATOR | Gere QR Code</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Principal -->
-
-    <!-- Rodapé -->
+    <div class="container">
+        <!-- Formulário para entrada de dados do QR Code -->
+        <form id="qrForm">
+            <label for="inputText">Texto ou URL:</label>
+            <input type="text" id="inputText" name="inputText" required>
+            
+            <label for="qrCustomize">Customize QR Code:</label>
+            <div id="qrCustomize">
+                <div id="qrCustomizeLabels">
+                    <label class="menuLabels" for="qrColor">Cor</label>
+                    <label class="menuLabels" for="qrSize">Tamanho</label>
+                    <label class="menuLabels" for="logoUpload">Logo</label>
+                </div>
+                <div id="qrCustomizeButtons">
+                    <label>
+                        <input type="color" id="qrColor" name="qrColor" value="#000000">
+                        <span></span>
+                    </label>
+                    <label>
+                        <input type="range" id="qrSize" name="qrSize" step="8" min="256" max="512" value="256">
+                        <span></span>
+                    </label>
+                    <label>
+                        <input type="file" id="logoUpload" name="logoUpload" accept="image/*">
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+            
+            <button type="submit">Gerar QR Code</button>
+        </form>
+        
+        <!-- Contêiner para exibir o QR Code gerado -->
+        <div id="qrCodeContainer">
+            <canvas id="qrCode"></canvas>
+        </div>
+    </div>
+    
     <footer>
-        <p>&copy; 2023 Award3d</p>
+        &copy; 2023 - Award3d
     </footer>
-
-    <!-- Script -->
+    
+    <!-- Bibliotecas externas para geração de QR Code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    
+    <!-- Script JavaScript para a funcionalidade do QR Code -->
     <script src="script.js"></script>
 </body>
 </html>
