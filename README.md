@@ -23,7 +23,7 @@ O QR Code Generator é uma ferramenta simples e eficiente para gerar QR Codes pe
 ## Como Usar 🚀
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seuusuario/qrcode-generator.git
+git clone https://github.com/wlauton/qr-minator.git
 ```
 2. Navegue até o diretório do projeto:
 `cd qrcode-generator`
