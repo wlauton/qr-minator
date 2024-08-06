@@ -45,6 +45,4 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 ## Contato 📧
 Para sugestões ou dúvidas, entre em contato via [award3d@gmail.com](mailto:award3d@gmail.com).
 
----
 
-> "Faça o que você pode, com o que você tem, onde você está." - Theodore Roosevelt
